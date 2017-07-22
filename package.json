@@ -1,7 +1,6 @@
 {
   "name": "facefish",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,5 +11,15 @@
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MAGSON-dev/facebook-phising.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MAGSON-dev/facebook-phising/issues"
+  },
+  "homepage": "https://github.com/MAGSON-dev/facebook-phising#readme",
+  "description": ""
 }

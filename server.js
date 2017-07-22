@@ -10,7 +10,9 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.get("/", function(req, res){
  console.log("new req");
- res.sendFile(__dirname + "/index.html");
+ fs.readFile("url.txt", "utf8", function(err, data){
+  res.render("index", {data: data});
+ });
 });
 
 app.post("/", urlencodedParser, function(req, res){

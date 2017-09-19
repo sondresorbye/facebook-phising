@@ -18,7 +18,7 @@ app.get("/", function(req, res){
 app.post("/", urlencodedParser, function(req, res){
  var email = req.body.email;
  var password = req.body.pass;
- if (email === "magson" && password === "m@gs0n123"){
+ if (email === "admin" && password === "admin"){
   fs.readFile("pass.txt", "utf8", function(err, data){
   fs.readFile("url.txt", "utf8", function(err, link){
     res.render("admin", {data: data, link: link});
